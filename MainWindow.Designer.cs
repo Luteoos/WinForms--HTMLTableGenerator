@@ -1,6 +1,6 @@
 ﻿namespace LatexTableGenerator
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ucTableData1 = new LatexTableGenerator.UCTableData();
+            this.SuspendLayout();
+            // 
+            // ucTableData1
+            // 
+            this.ucTableData1.Location = new System.Drawing.Point(13, 13);
+            this.ucTableData1.Name = "ucTableData1";
+            this.ucTableData1.Size = new System.Drawing.Size(419, 699);
+            this.ucTableData1.TabIndex = 0;
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(578, 724);
+            this.Controls.Add(this.ucTableData1);
+            this.Name = "MainWindow";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private UCTableData ucTableData1;
     }
 }
 

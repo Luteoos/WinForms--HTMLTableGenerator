@@ -16,7 +16,12 @@ namespace LatexTableGenerator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            MainWindow view=new MainWindow();
+            Model model=new Model();
+            Controller controller = new Controller(ref model,ref view);
+
+            Application.Run(view);
         }
     }
 }

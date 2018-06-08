@@ -1,4 +1,4 @@
-﻿namespace LatexTableGenerator
+﻿namespace HTMLTableGenerator
 {
     partial class UCTableData
     {
@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TBColumn = new System.Windows.Forms.TextBox();
-            this.TBRow = new System.Windows.Forms.TextBox();
             this.LabelRow = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BAddAdvancedOption = new System.Windows.Forms.Button();
             this.BRemoveAdvancedOption = new System.Windows.Forms.Button();
             this.LabelAdvOpt = new System.Windows.Forms.Label();
+            this.TBColumn = new System.Windows.Forms.NumericUpDown();
+            this.TBRow = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.TBColumn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBRow)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TBColumn
-            // 
-            this.TBColumn.Location = new System.Drawing.Point(41, 35);
-            this.TBColumn.Name = "TBColumn";
-            this.TBColumn.Size = new System.Drawing.Size(100, 22);
-            this.TBColumn.TabIndex = 0;
-            // 
-            // TBRow
-            // 
-            this.TBRow.Location = new System.Drawing.Point(156, 35);
-            this.TBRow.Name = "TBRow";
-            this.TBRow.Size = new System.Drawing.Size(100, 22);
-            this.TBRow.TabIndex = 1;
             // 
             // LabelRow
             // 
@@ -92,38 +80,74 @@
             // LabelAdvOpt
             // 
             this.LabelAdvOpt.AutoSize = true;
-            this.LabelAdvOpt.Location = new System.Drawing.Point(271, 15);
+            this.LabelAdvOpt.Location = new System.Drawing.Point(272, 14);
             this.LabelAdvOpt.Name = "LabelAdvOpt";
-            this.LabelAdvOpt.Size = new System.Drawing.Size(124, 17);
+            this.LabelAdvOpt.Size = new System.Drawing.Size(101, 17);
             this.LabelAdvOpt.TabIndex = 6;
-            this.LabelAdvOpt.Text = "Advanced Options";
+            this.LabelAdvOpt.Text = "Merge Options";
+            // 
+            // TBColumn
+            // 
+            this.TBColumn.Location = new System.Drawing.Point(30, 36);
+            this.TBColumn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TBColumn.Name = "TBColumn";
+            this.TBColumn.Size = new System.Drawing.Size(120, 22);
+            this.TBColumn.TabIndex = 7;
+            this.TBColumn.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // TBRow
+            // 
+            this.TBRow.Location = new System.Drawing.Point(156, 36);
+            this.TBRow.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TBRow.Name = "TBRow";
+            this.TBRow.Size = new System.Drawing.Size(120, 22);
+            this.TBRow.TabIndex = 8;
+            this.TBRow.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // UCTableData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.Controls.Add(this.TBRow);
+            this.Controls.Add(this.TBColumn);
             this.Controls.Add(this.LabelAdvOpt);
             this.Controls.Add(this.BRemoveAdvancedOption);
             this.Controls.Add(this.BAddAdvancedOption);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LabelRow);
-            this.Controls.Add(this.TBRow);
-            this.Controls.Add(this.TBColumn);
             this.Name = "UCTableData";
-            this.Size = new System.Drawing.Size(419, 647);
+            this.Size = new System.Drawing.Size(465, 619);
+            ((System.ComponentModel.ISupportInitialize)(this.TBColumn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBRow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TBColumn;
-        private System.Windows.Forms.TextBox TBRow;
         private System.Windows.Forms.Label LabelRow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BAddAdvancedOption;
         private System.Windows.Forms.Button BRemoveAdvancedOption;
         private System.Windows.Forms.Label LabelAdvOpt;
+        private System.Windows.Forms.NumericUpDown TBColumn;
+        private System.Windows.Forms.NumericUpDown TBRow;
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LatexTableGenerator
+namespace HTMLTableGenerator
 {
     class Controller
     {
@@ -15,7 +15,13 @@ namespace LatexTableGenerator
         {
             _model = model;
             _view = view;
+            _view.DataGeneratedAction += this.DataReceived;
+
         }
 
+        private void DataReceived(int column, int row, List<DataMergeVariables> listDataMerge)
+        {
+
+        }
     }
 }

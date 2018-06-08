@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LatexTableGenerator.Properties
+namespace HTMLTableGenerator.Properties
 {
 
 

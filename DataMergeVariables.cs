@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +36,8 @@ namespace HTMLTableGenerator
 
         public DataMergeVariables(int c, int r, int cSpan, int rSpan)
         {
-            _column = c;
-            _row = r;
+            _column = --c;
+            _row = --r;
             _columnSpan = cSpan;
             _rowSpan = rSpan;
         }

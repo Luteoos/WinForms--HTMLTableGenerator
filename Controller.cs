@@ -21,7 +21,7 @@ namespace HTMLTableGenerator
 
         private void DataReceived(int column, int row, List<DataMergeVariables> listDataMerge)
         {
-
+            _model.GenerateHTML(column,row,listDataMerge);
         }
     }
 }

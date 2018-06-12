@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -12,6 +14,7 @@ namespace HTMLTableGenerator
     {
         private string[,] _htmlCode;
         private string _document;
+        private string _lastPath;
 #region Static Strings
         private static string _defaultCell = "<td></td>\r\n";
         private static string _startRow = "<tr>\r\n";
@@ -123,6 +126,39 @@ namespace HTMLTableGenerator
                 }
             }
             return true;
+        }
+
+        public void SaveToFile()
+        {
+            try
+            {
+                _lastPath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
+                    + @"\" + "TableHTML_" + DateTime.Now.ToString("yy-MM-dd--hh-mm"));
+                _lastPath = Path.ChangeExtension(_lastPath, ".html");
+
+                using (StreamWriter sr = File.CreateText(_lastPath))
+                {
+                    sr.Write(_document);
+                }
+
+                OpenFile(_lastPath);
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        private void OpenFile(string path)
+        {
+            try
+            {
+                Process.Start(path);
+            }
+            catch (Exception e)
+            {
+
+            }
         }
     }
 }

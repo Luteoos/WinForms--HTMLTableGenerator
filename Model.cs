@@ -134,7 +134,7 @@ namespace HTMLTableGenerator
             {
                 _lastPath = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-                    + @"\" + "TableHTML_" + DateTime.Now.ToString("yy-MM-dd--hh-mm"));
+                    + @"\" + "TableHTML_" + DateTime.Now.ToString("yy-MM-dd--hh-mm_ss"));
                 _lastPath = Path.ChangeExtension(_lastPath, ".html");
 
                 using (StreamWriter sr = File.CreateText(_lastPath))
